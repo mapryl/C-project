@@ -1,0 +1,3 @@
+C:/Users/asi30/OneDrive/Documents/Clion project/libft/libft/cmake-build-debug/CMakeFiles/libft.dir
+C:/Users/asi30/OneDrive/Documents/Clion project/libft/libft/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/asi30/OneDrive/Documents/Clion project/libft/libft/cmake-build-debug/CMakeFiles/rebuild_cache.dir

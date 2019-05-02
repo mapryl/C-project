@@ -12,9 +12,11 @@
 
 NAME = libft.a
 
-SRCS = ft_atoi.c ft_bzero.c ft_isalnum.c \
-	 ft_isalpha.c ft_isascii.c ft_isblank ft_isdigit.c ft_islower.c ft_isprint.c \
-	 ft_isspace ft_isupper.c ft_itoa.c ft_lstadd.c \
+FLAGS = -Wall -Wextra -Werror
+
+SRCS = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
+         ft_isblank.c ft_isdigit.c ft_islower.c ft_isprint.c \
+	 ft_isspace.c ft_isupper.c ft_itoa.c ft_lstadd.c \
 	 ft_lstdel.c ft_lstdelone.c ft_lstiter.c ft_lstmap.c ft_lstnew.c \
 	 ft_memalloc.c ft_memccpy.c ft_memchr.c ft_memcmp.c ft_memcpy.c \
 	 ft_memdel.c ft_memmove.c ft_memset.c ft_putchar.c ft_putchar_fd.c \
@@ -27,19 +29,19 @@ SRCS = ft_atoi.c ft_bzero.c ft_isalnum.c \
 	 ft_strrchr.c ft_strsplit.c ft_strstr.c \
 	 ft_strsub.c ft_strtrim.c ft_tolower.c ft_toupper.c
 
-OBJECTS = $(SRCS:%.c=%.o)
+OBJS = $(SRCS:.c=.o)
 
-INCLUDES =./
+INCLUDES = ./
 
 all: $(NAME)
 
 $(NAME): $(SRCS) libft.h
-	@gcc -Wall -Wextra -Werror -I$(INCLUDES) -c $(SRCS)
-	@ar rc $(NAME) $(OBJECTS)
+	@gcc -c $(SRCS) -I$(INCLUDES) -Wall -Wextra -Werror
+	@ar rc $(NAME) $(OBJS)
 	@ranlib $(NAME)
 
 clean:
-	@/bin/rm -f $(OBJECTS)
+	@/bin/rm -f $(OBJS)
 
 fclean: clean
 	@/bin/rm -f $(NAME)

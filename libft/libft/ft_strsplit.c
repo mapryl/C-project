@@ -12,12 +12,12 @@
 
 #include "libft.h"
 
-int		is_char(char ch, char c)
+int		is_char(const char ch, char c)
 {
 	return (ch == c);
 }
 
-int		next_word(char *str, int pos, char c)
+int		next_word(const char *str, int pos, char c)
 {
 	while (is_char(str[pos], c))
 		pos++;
@@ -27,14 +27,14 @@ int		next_word(char *str, int pos, char c)
 		return (-1);
 }
 
-int		read_word(char *str, int pos, char c)
+int		read_word(const char *str, int pos, char c)
 {
 	while (str[pos] != '\0' && !is_char(str[pos], c))
 		pos++;
 	return (pos);
 }
 
-int		count_words(char *str, char c)
+int		count_words(const char *str, char c)
 {
 	int pos;
 	int words;

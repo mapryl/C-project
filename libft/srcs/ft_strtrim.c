@@ -14,19 +14,22 @@
 
 char	*ft_strtrim(char const *s)
 {
-	char *result;
+	s = s;
+	return (NULL);
+	/*char *result;
 	size_t i;
 	size_t start;
 	size_t end;
 
+	result = 0;
 	if (!s)
 		return (NULL);
 	i = 0;
 	start = 0;
 	end = ft_strlen(s);
-	while (s[start] && (ft_isblank(s[start]) || s[start] == '\n'))
+	while (s[start] && (s[start] == ' ' || s[start] == '\t' || s[start] == '\n'))
 		start++;
-	while (end && (ft_isblank(s[end - 1]) || s[end - 1] == '\n'))
+	while (end && (s[end - 1] == ' ' || s[end - 1] == '\t' || s[end - 1] == '\n'))
 		end--;
 	if (end > start)
 		result = ft_strnew(end - start);
@@ -35,6 +38,6 @@ char	*ft_strtrim(char const *s)
 	while (start < end)
 		result[i++] = s[start++];
 	result[i] = '\0';
-	return (result);
+	return (result); */
 }
 

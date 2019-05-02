@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char *ft_strrstr(const char *s, int c)
+char *ft_strrchr(const char *s, int c)
 {
     char *last_pos;
 

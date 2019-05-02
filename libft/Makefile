@@ -14,7 +14,9 @@ NAME = libft.a
 
 FLAGS = -Wall -Wextra -Werror
 
-SRCS = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
+SRC_PATH = ./srcs/
+
+SRC_FILES = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
          ft_isblank.c ft_isdigit.c ft_islower.c ft_isprint.c \
 	 ft_isspace.c ft_isupper.c ft_itoa.c ft_lstadd.c \
 	 ft_lstdel.c ft_lstdelone.c ft_lstiter.c ft_lstmap.c ft_lstnew.c \
@@ -29,14 +31,20 @@ SRCS = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 	 ft_strrchr.c ft_strsplit.c ft_strstr.c \
 	 ft_strsub.c ft_strtrim.c ft_tolower.c ft_toupper.c
 
-OBJS = $(SRCS:.c=.o)
+SRCS = $(addprefix $(SRC_PATH), $(SRC_FILES))
 
-INCLUDES = ./
+HEAD_PATH = ./includes/
+
+HEAD_FILES = libft.h
+
+HEADERS = $(addprefix $(HEAD_PATH), $(HEAD_FILES))
+
+OBJS = $(SRC_FILES:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(SRCS) libft.h
-	@gcc -c $(SRCS) -I$(INCLUDES) -Wall -Wextra -Werror
+$(NAME): $(SRCS) $(HEADERS)
+	@gcc -c $(SRCS) -I$(HEAD_PATH) $(FLAGS)
 	@ar rc $(NAME) $(OBJS)
 	@ranlib $(NAME)
 

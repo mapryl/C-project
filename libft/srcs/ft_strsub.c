@@ -24,10 +24,7 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	if (!result)
 		return (NULL);
 	while (i < len)
-	{
 		result[i++] = s[start++];
-		i++;
-	}
 	result[i] = '\0';
 	return (result);
 }

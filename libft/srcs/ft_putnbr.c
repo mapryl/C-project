@@ -24,7 +24,6 @@ void	ft_putnbr(int n)
 	}
 	if (n == -2147483648)
 	{
-		ft_putchar('-');
 		ft_putchar('2');
 		n %= 1000000000;
 		minus = 1;

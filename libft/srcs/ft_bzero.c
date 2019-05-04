@@ -6,17 +6,17 @@
 /*   By: mapryl <mapryl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/02 19:46:14 by mapryl            #+#    #+#             */
-/*   Updated: 2019/04/03 18:50:31 by mapryl           ###   ########.fr       */
+/*   Updated: 2019/05/04 16:54:30 by mapryl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    unsigned char *str;
+	unsigned char *str;
 
-    str = (unsigned char*)s;
-    while(n--)
-        *(str++) = '\0';
+	str = (unsigned char*)s;
+	while (n--)
+		*(str++) = '\0';
 }

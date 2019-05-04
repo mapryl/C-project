@@ -6,13 +6,13 @@
 /*   By: mapryl <mapryl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/03 16:01:23 by mapryl            #+#    #+#             */
-/*   Updated: 2019/04/03 16:01:25 by mapryl           ###   ########.fr       */
+/*   Updated: 2019/05/04 16:56:16 by mapryl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isdigit(int c)
+int		ft_isdigit(int c)
 {
-    return (c >= '0' && c <= '9');
+	return (c >= '0' && c <= '9');
 }

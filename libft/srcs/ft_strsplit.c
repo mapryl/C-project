@@ -6,7 +6,7 @@
 /*   By: mapryl <mapryl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/29 10:47:04 by mapryl            #+#    #+#             */
-/*   Updated: 2019/04/29 10:47:04 by mapryl           ###   ########.fr       */
+/*   Updated: 2019/05/04 20:24:23 by mapryl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ static int		read_word(const char *str, int pos, char c)
 
 static int		count_words(const char *str, char c)
 {
-	int pos;
-	int words;
+	int		pos;
+	int		words;
 
 	pos = 0;
 	words = 0;
@@ -49,7 +49,7 @@ static int		count_words(const char *str, char c)
 	return (words);
 }
 
-char	**ft_strsplit(char const *str, char c)
+char			**ft_strsplit(char const *str, char c)
 {
 	int		cur_word;
 	int		pos;
@@ -57,8 +57,11 @@ char	**ft_strsplit(char const *str, char c)
 	int		j;
 	char	**words;
 
+	if (!str)
+		return (NULL);
 	j = count_words(str, c);
-	words = (char**)malloc(sizeof(char*) * (j + 1));
+	if (!(words = (char**)malloc(sizeof(char*) * (j + 1))))
+		return (NULL);
 	cur_word = 0;
 	pos = 0;
 	while ((pos = next_word(str, pos, c)) != -1)

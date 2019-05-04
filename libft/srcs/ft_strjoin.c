@@ -6,7 +6,7 @@
 /*   By: mapryl <mapryl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/29 10:45:14 by mapryl            #+#    #+#             */
-/*   Updated: 2019/04/29 10:45:14 by mapryl           ###   ########.fr       */
+/*   Updated: 2019/05/04 17:41:16 by mapryl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		i++;
 	}
 	while (j < s2_len)
-	{
-		result[i] = s2[j];
-		j++;
-		i++;
-	}
+		result[i++] = s2[j++];
 	result[i] = '\0';
 	return (result);
 }

@@ -6,14 +6,13 @@
 /*   By: mapryl <mapryl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/03 16:02:43 by mapryl            #+#    #+#             */
-/*   Updated: 2019/04/03 16:02:45 by mapryl           ###   ########.fr       */
+/*   Updated: 2019/05/04 16:56:42 by mapryl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int c)
+int		ft_isprint(int c)
 {
-    return (c >= 32 && c <= 126);
+	return (c >= 32 && c <= 126);
 }
-

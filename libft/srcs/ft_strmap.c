@@ -6,7 +6,7 @@
 /*   By: mapryl <mapryl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/29 10:45:40 by mapryl            #+#    #+#             */
-/*   Updated: 2019/04/29 10:45:40 by mapryl           ###   ########.fr       */
+/*   Updated: 2019/05/04 17:38:48 by mapryl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strmap(char const *s, char (*f)(char))
 {
 	char	*result;
-	int	i;
+	int		i;
 
 	if (!s || !f)
 		return (NULL);
@@ -31,4 +31,3 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	result[i] = '\0';
 	return (result);
 }
-
